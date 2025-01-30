@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+    min-height: 100vh;
+    
+    background-image: url('pexels-marek-piwnicki-3907296-14549220.jpg'); /* Ganti dengan URL gambar kamu */
+    background-size: cover; /* Agar gambar menutupi seluruh layar */
+    background-position: center; /* Agar gambar tetap terpusat */
+    background-attachment: fixed; /* Gambar tetap di tempat saat halaman di-scroll */
+    
+}
+
+.box-text {
+    background-color: rgba(255, 255, 255, 0.475); 
+    color: rgb(36, 36, 36); 
+    padding: 20px;
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    text-align: justify;
+    max-width: 800px;
+    width: 90%; 
+    margin: auto;    
+}
+
+
+
+header {
+    background-color: #21312a;
+    color: white;
+    text-align: center;
+    padding: 0.5rem 0;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+/*
+.gallery-container {
+    column-count: 5; 
+    column-gap: 5px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+} */
+.gallery-container {          /* tenkyu gpt (bagian ini bantuan gpt wkwkwk */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Kolom fleksibel */
+    gap: 10px; /* Jarak antar gambar */
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: center; /* Pusatkan isi jika kurang dari batas */
+}
+
+
+.gallery-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffffa8;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.gallery-item p {
+    padding: 0%;
+    text-align:center;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #343a40;
+    color: white;
+    margin-top: 2rem;
+   
+}
+
+
+
+/* Lightbox styling */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+}
+
+.lightbox p {
+    color: white;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
